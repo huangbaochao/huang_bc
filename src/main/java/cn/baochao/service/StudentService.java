@@ -10,4 +10,5 @@ import java.util.Map;
 public interface StudentService {
 
     public Map<String, Object> insertSelective(StudentDto dto);
+
 }

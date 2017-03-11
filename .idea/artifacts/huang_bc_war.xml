@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="huang_bc:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="huangbaochao-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="huang_bc:war exploded" />
+    </root>
+  </artifact>
+</component>
