@@ -9,6 +9,7 @@ public class PhoneDto implements Serializable{
 
     private int id;
 
+    //颜色
     private String color;
 
     public int getId() {
@@ -34,4 +35,4 @@ public class PhoneDto implements Serializable{
                 ", color='" + color + '\'' +
                 '}';
     }
-}
+

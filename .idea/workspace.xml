@@ -116,17 +116,17 @@
       <file leaf-file-name="Computer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/baochao/dto/Computer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="322">
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding>
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#639#640#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1272,7 +1272,7 @@
       <workItem from="1489201812481" duration="12837000" />
       <workItem from="1489215778878" duration="308000" />
       <workItem from="1489225013502" duration="731000" />
-      <workItem from="1489900379267" duration="1862000" />
+      <workItem from="1489900379267" duration="2112000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1489208887707</created>
@@ -1285,7 +1285,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15738000" />
+    <option name="totallyTimeSpent" value="15988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1628,17 +1628,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/baochao/dto/Computer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="322">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
           </folding>
         </state>
       </provider>
