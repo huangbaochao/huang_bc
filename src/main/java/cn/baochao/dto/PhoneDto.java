@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by huangbaochao on 2017/3/19 $version 1.0.
  */
-public class PhoneDto implements Serializable{
+public class PhoneDto implements Serializable {
 
     private int id;
 
@@ -35,4 +35,4 @@ public class PhoneDto implements Serializable{
                 ", color='" + color + '\'' +
                 '}';
     }
-
+}
