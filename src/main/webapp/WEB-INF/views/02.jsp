@@ -97,8 +97,8 @@
 <center>
     <form id="but_id" method="post" action="${pageContext.request.contextPath}/demo/show12.do">
         <%--id: <input type="text" name="id" value="1"/>--%>
-        username:<input type="text" name="userName" value="11111"/>
-        password:<input type="password" name="password" value="22"/>
+        username:<input type="text" name="userName" value="黄保朝"/>
+        password:<input type="password" name="password" value="25"/>
         <%--age :<input type="text" name="age" value=""/>--%>
         <input type="button" value="tijiao" id="sub_mit">
     </form>
