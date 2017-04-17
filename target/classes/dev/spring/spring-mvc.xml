@@ -9,12 +9,12 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:component-scan base-package="cn.baochao.controller"/>
     <mvc:annotation-driven/>
-    <context:component-scan base-package="cn.baochao.*"/>
-    <!--<mvc:resources mapping="/salesApp/**" location="/salesApp/"/>-->
-    <!--<mvc:resources mapping="/assets/**"-->
-                   <!--location="classpath:/META-INF/resources/webjars/"/>-->
-    <!--<mvc:resources mapping="/**" location="/"/>-->
+    <mvc:resources mapping="/salesApp/**" location="/salesApp/"/>
+    <mvc:resources mapping="/assets/**"
+                   location="classpath:/META-INF/resources/webjars/"/>
+    <mvc:resources mapping="/**" location="/"/>
 
     <!-- <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> -->
     <!-- <property name="defaultEncoding" value="utf-8" /> -->
@@ -22,9 +22,9 @@
     <!-- <property name="maxInMemorySize" value="40960" /> -->
     <!-- </bean> -->
 
-    <!--<mvc:cors>-->
-        <!--<mvc:mapping path="/**"/>-->
-    <!--</mvc:cors>-->
+    <mvc:cors>
+        <mvc:mapping path="/**"/>
+    </mvc:cors>
 
 
     <!-- 登录拦截器 -->
