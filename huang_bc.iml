@@ -148,5 +148,6 @@
     <orderEntry type="library" name="Maven: stax:stax-api:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.virtuald:curvesapi:1.04" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:3.6.1" level="project" />
+    <orderEntry type="library" name="huang_bc" level="project" />
   </component>
 </module>
