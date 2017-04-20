@@ -1,18 +1,27 @@
 package cn.baochao.test;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Created by huangbc on 2017/4/19.
  */
 public class Counter {
 
-    public volatile static int count = 0;
+    private final static Logger LOGGER = LoggerFactory.getLogger(Counter.class);
+
+    public static int count = 0;
 
     public  static void inc() {
 
+        LOGGER.debug("----------------开始计数！-------------------------------");
+
         //这里延迟1毫秒，使得结果明显
+
         try {
             Thread.sleep(1);
         } catch (InterruptedException e) {
+            LOGGER.debug("计数异常");
         }
 
         count++;
@@ -24,7 +33,6 @@ public class Counter {
 
         for (int i = 0; i < 1000; i++) {
             new Thread(new Runnable() {
-                @Override
                 public void run() {
                     Counter.inc();
                 }

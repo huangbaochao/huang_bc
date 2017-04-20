@@ -80,6 +80,7 @@ public class JvmDemo extends ClassLoader {
                 loader = loader.getParent();    //获得父加载器的引用
             }
             System.out.println(loader);*/
+
             String rootUrl = "http://139.196.243.18:8887/vine/classes";
             JvmDemo networkClassLoader = new JvmDemo(rootUrl);
             String classname = "com.dadi.vine.fuyou.points.controller.FuyouController";
