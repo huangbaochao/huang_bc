@@ -26,6 +26,7 @@
         <mvc:mapping path="/**"/>
     </mvc:cors>
 
+    <import resource="classpath:/dev/spring/springfox-config.xml" />
 
     <!-- 登录拦截器 -->
     <!-- 	<mvc:interceptors>

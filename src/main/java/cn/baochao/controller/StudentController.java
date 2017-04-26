@@ -3,6 +3,8 @@ package cn.baochao.controller;
 import cn.baochao.dto.StudentDto;
 import cn.baochao.exception.BEX;
 import cn.baochao.service.StudentService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +18,9 @@ import java.util.Map;
 /**
  * Created by huangbc on 2017/3/11.
  */
+
+@CrossOrigin(maxAge = 3600)
+@Api(value = "note-api")
 @RestController
 @RequestMapping("student")
 public class StudentController {
@@ -25,14 +30,15 @@ public class StudentController {
     StudentService studentService;
 
 
-    @RequestMapping(value = "test1")
-    public ModelAndView student01() {
-        ModelAndView mode = new ModelAndView("02");
-        return mode;
-    }
+//    @RequestMapping(value = "test1")
+//    public ModelAndView student01() {
+//        ModelAndView mode = new ModelAndView("02");
+//        return mode;
+//    }
 
+    @ApiOperation(value = "test2")
     @RequestMapping(value = "test2", method = RequestMethod.POST)
-    public Map<String, Object> fuyouDict(@Valid StudentDto dto, BindingResult result, HttpServletRequest req, HttpServletResponse resp) throws Exception {
+    public Map<String, Object> fuyouDict(@Valid @RequestBody StudentDto dto, BindingResult result, HttpServletRequest req, HttpServletResponse resp) throws Exception {
         if (result.hasErrors()) {
             String field = result.getFieldError().getField();
             String defaultMessage = result.getFieldError().getDefaultMessage();
