@@ -20,16 +20,17 @@
                     data:/* null,*/
                     {
 //                        id: $("input[name='id']").val(),
-                        name: $("input[name='userName']").val(),
-                        age: $("input[name='password']").val()
+                        name: $("input[name='name']").val(),
+                        age: $("input[name='age']").val()
 //                        age: $("input[name='age']").val()
 //                        ds:JSON.stringify(data)
                     },
                     dataType: "json",
                     success: function (data) {
-                        JSON.stringify()
-                        console.log(data.success)
-                        console.log(data.data.id);
+                        console.log(data.code);
+//                        JSON.stringify()
+//                        console.log(data.success)
+//                        console.log(data.data.id);
 //                        var listMap = eval(data.object);
 //
 //                        for(var j=0;j<listMap.length;j++)
@@ -97,8 +98,8 @@
 <center>
     <form id="but_id" method="post" action="${pageContext.request.contextPath}/demo/show12.do">
         <%--id: <input type="text" name="id" value="1"/>--%>
-        username:<input type="text" name="userName" value="黄保朝"/>
-        password:<input type="password" name="password" value="25"/>
+        username:<input type="text" name="name" value="huangbaochao"/>
+        password:<input type="password" name="age" value="25"/>
         <%--age :<input type="text" name="age" value=""/>--%>
         <input type="button" value="tijiao" id="sub_mit">
     </form>

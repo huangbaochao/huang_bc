@@ -26,22 +26,23 @@ public class StudentController {
 
 
     @RequestMapping(value = "test1")
-    public ModelAndView student01(){
+    public ModelAndView student01() {
         ModelAndView mode = new ModelAndView("02");
         return mode;
     }
 
-    @RequestMapping(value = "test2",method = RequestMethod.POST)
+    @RequestMapping(value = "test2", method = RequestMethod.POST)
     public Map<String, Object> fuyouDict(@Valid StudentDto dto, BindingResult result, HttpServletRequest req, HttpServletResponse resp) throws Exception {
         if (result.hasErrors()) {
+            String field = result.getFieldError().getField();
+            String defaultMessage = result.getFieldError().getDefaultMessage();
             throw new BEX("1002", "参数异常");
         }
         //获取req对象参数
-        req.setAttribute("huang","baochao");
-        req.getRequestDispatcher("/02.jsp").forward(req,resp);//转发
+//        req.setAttribute("huang","baochao");
+//        req.getRequestDispatcher("/02.jsp").forward(req,resp);//转发
         return studentService.insertSelective(dto);
     }
-
 
 
 }

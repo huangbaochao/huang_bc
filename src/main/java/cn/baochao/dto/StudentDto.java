@@ -1,5 +1,7 @@
 package cn.baochao.dto;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import java.io.Serializable;
 
 /**
@@ -9,6 +11,7 @@ public class StudentDto implements Serializable{
 
     private static final long serialVersionUID = 2332608236621015980L;
 
+    @NotBlank
     private String name;
 
     private String age;

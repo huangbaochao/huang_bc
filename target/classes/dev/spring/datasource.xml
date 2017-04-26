@@ -44,7 +44,7 @@
 	<!-- 启用对事务注解的支持 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	<!-- spring与mybatis整合配置，扫描所有dao -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" p:sqlSessionFactoryBeanName="sqlSessionFactory" p:basePackage="cn.baochao.*" />
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" p:sqlSessionFactoryBeanName="sqlSessionFactory" p:basePackage="cn.baochao.repository" />
 
 
 </beans>

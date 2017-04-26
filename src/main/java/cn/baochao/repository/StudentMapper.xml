@@ -4,7 +4,7 @@
 
     <insert id="insertSelective" parameterType="cn.baochao.dto.StudentDto">
         insert into user (user_name,age)
-        values (#{name,jdbcType=VARCHAR},#{age,jdbcType=VARCHAR})
+        values (#{name,jdbcType=VARCHAR},#{age,jdbcType=TINYINT})
     </insert>
 
 </mapper>

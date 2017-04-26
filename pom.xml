@@ -34,15 +34,6 @@
     </profiles>
     <build>
         <plugins>
-            <!-- 配置Tomcat插件 -->
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <configuration>
-                    <port>8081</port>
-                    <path>/</path>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -52,41 +43,25 @@
                 </configuration>
             </plugin>
 
-
-            <!--打war包到指定的目录下 -->
+            <!-- 配置Tomcat插件 -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.8</version>
-                <executions>
-                    <execution>
-                        <id>copy-war</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>${project.artifactId}</artifactId>
-                                    <version>${project.version}</version>
-                                    <type>${project.packaging}</type>
-                                </artifactItem>
-                            </artifactItems>
-                            <!-- <outputDirectory>${dist.console.war.dir}</outputDirectory> -->
-                            <!--指定war包保存地址 -->
-                            <outputDirectory>${basedir}/WAR/${package.environment}</outputDirectory>
-                            <!--<includes>-->
-                            <!--<include>*.war</include>-->
-                            <!--</includes>-->
-                        </configuration>
-                    </execution>
-                </executions>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <port>8081</port>
+                    <path>/</path>
+                </configuration>
             </plugin>
-
-
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
     <repositories>
 
