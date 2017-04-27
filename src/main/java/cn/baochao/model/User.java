@@ -1,35 +1,38 @@
 package cn.baochao.model;
 
-/**
- * Created by huangbc on 2017/4/17.
- */
-public class User {
-    private String name;
+import java.io.Serializable;
 
+public class User implements Serializable {
 
-    private String age;
+    private Integer userId;
 
-    public String getName() {
-        return name;
+    private String userName;
+
+    private Byte age;
+
+    private static final long serialVersionUID = 1L;
+
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public String getAge() {
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public Byte getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Byte age) {
         this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", age='" + age + '\'' +
-                '}';
     }
 }

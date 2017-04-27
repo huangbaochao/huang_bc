@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<properties url="${mybatis.generatorConfig.properties}" />
+	<!-- 配置文件路径 -->
+	<classPathEntry location="${drive.class.path}" />
+
+	<context id="MySQLTables" targetRuntime="MyBatis3">
+
+
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+		<commentGenerator>
+			<property name="javaFileEncoding" value="UTF-8" /><!--指定文件编码 -->
+			<property name="suppressDate" value="true" /><!-- 是否生成注释代时间戳 -->
+			<property name="suppressAllComments" value="true" /><!-- 是否去除自动生成的注释 
+				true：是 ： false:否 -->
+		</commentGenerator>
+
+
+		<!--数据库连接信息 -->
+		<jdbcConnection driverClass="${jdbc.driver}"
+			connectionURL="${jdbc.url}" userId="${jdbc.username}" password="${jdbc.password}" />
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="true" />
+		</javaTypeResolver>
+
+		<!--各种输出配置 -->
+		<javaModelGenerator targetPackage="${model.package}"
+			targetProject="${target.project}">
+			<property name="enableSubPackages" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="${xml.mapper.package}"
+			targetProject="${target.project}">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator targetPackage="${dao.package}"
+			targetProject="${target.project}" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!--需要逆向的表 -->
+		<table tableName="user"></table>
+	</context>
+</generatorConfiguration>

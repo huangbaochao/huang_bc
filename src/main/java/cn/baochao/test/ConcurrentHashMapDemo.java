@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by huangbc on 2017/4/27.
@@ -30,6 +31,8 @@ public class ConcurrentHashMapDemo {
 //        其他段的数据也能被其他线程访问。
 //        锁分段技术：---------------------------------------------------------------------------------
 
+        AtomicInteger count = new AtomicInteger();
+        System.out.println(count.get());
     }
 
 
