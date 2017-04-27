@@ -22,8 +22,15 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <package.environment>development</package.environment>
+                <package.environment>dev</package.environment>
             </properties>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources/dev/config</directory>
+                    </resource>
+                </resources>
+            </build>
         </profile>
         <profile>
             <id>pro</id>
