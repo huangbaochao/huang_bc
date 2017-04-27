@@ -2,6 +2,7 @@ package cn.baochao.test;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -28,7 +29,6 @@ public class ConcurrentHashMapDemo {
 //        首先将数据分成一段一段的存储，然后给每一段数据配一把锁，当一个线程占用锁访问其中一个段数据 的时候，
 //        其他段的数据也能被其他线程访问。
 //        锁分段技术：---------------------------------------------------------------------------------
-
 
     }
 
