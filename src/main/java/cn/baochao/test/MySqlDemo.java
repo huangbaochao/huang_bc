@@ -33,7 +33,7 @@ public class MySqlDemo extends Object{
         //hashcode equels toString clone wait notify  notifyAll
         //
         //clone方法：如果实现了toString方法，打印的对象是相同的，如果没有实现，打印的地址是不相同的，
-        //说明clone方法，创建了一个新的地址，也就是创建了一个新对象。
+        //说明clone方法，创建了一个新的地址，也就是创建了一个新对象。。。。。
         //
         //-----------------------------------------------------------------------------------
         //
