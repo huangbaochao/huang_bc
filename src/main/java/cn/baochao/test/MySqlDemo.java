@@ -11,7 +11,7 @@ public class MySqlDemo extends Object{
     public static void main(String[] args) throws Exception {
         User user = new User();
         user.setName("huang");
-        user.setAge("25");
+        user.setAge(25);
         User clone = (User)user.clone();
         System.out.println(user);
         System.out.println(clone);

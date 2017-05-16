@@ -9,7 +9,7 @@ public class User implements Serializable,Cloneable{
 
     private String name;
 
-    private String age;
+    private int age;
 
     public String getName() {
         return name;
@@ -19,11 +19,11 @@ public class User implements Serializable,Cloneable{
         this.name = name;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -47,14 +47,14 @@ public class User implements Serializable,Cloneable{
 
         User user = (User) o;
 
-        if (name != null ? !name.equals(user.name) : user.name != null) return false;
-        return age != null ? age.equals(user.age) : user.age == null;
+        if (age != user.age) return false;
+        return name != null ? name.equals(user.name) : user.name == null;
     }
 
     @Override
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (age != null ? age.hashCode() : 0);
+        result = 31 * result + age;
         return result;
     }
 }
