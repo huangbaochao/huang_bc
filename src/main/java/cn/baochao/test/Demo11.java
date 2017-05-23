@@ -288,7 +288,7 @@ public class Demo11 {
                 "    }\n" +
                 "}";
 
-        //方法1
+        //方法1 net.sf.json
         Object o = JSONObject.fromObject(JSONObject.fromObject(str).get("data")).get("before");
         JSONArray jsonArray = JSONArray.fromObject(o);
         for (Object o1 : jsonArray) {
@@ -300,7 +300,7 @@ public class Demo11 {
             String dryBulTemp = jsonObject.get("dryBulTemp").toString();
         }
 
-        //方法2
+        //方法2 gson
         JsonObject obj = new JsonParser().parse(str).getAsJsonObject();
         JsonObject data = obj.get("data").getAsJsonObject();
         JsonArray before = data.get("before").getAsJsonArray();
@@ -313,7 +313,7 @@ public class Demo11 {
             String dryBulTemp = jo.get("dryBulTemp").toString();
         }
 
-        //方法3
+        //方法3 fastjson
         com.alibaba.fastjson.JSONObject data1 = JSON.parseObject(JSON.parseObject(str).get("data").toString());
         com.alibaba.fastjson.JSONArray result = data1.getJSONArray("before");
         List<Map> maps = JSON.parseArray(result.toJSONString(), Map.class);
